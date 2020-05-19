@@ -1,0 +1,17 @@
+.related
+  .c
+    .related__title Еще проекты
+
+    .related__items
+      each i in [1,2,3]
+        .related__item
+          a.related__card(href='#'): .related__inner
+            .related__image(style='background-image: url(images/01.jpeg)')
+            .related__body
+              .related__address
+                +svg('icon-geo')
+                | Казань, Россия
+              .related__name Название проекта, который отображается
+            .related__more
+              span ПОДРОБНЕЕ
+              +svg('icon-right')

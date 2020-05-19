@@ -1,0 +1,48 @@
+.input
+  position: relative;
+  margin-bottom: 35px
+  display: block;
+
+  input
+    position: relative;
+    z-index: 1
+    display: block
+    width: 100%
+    background: #f7f7f7
+    padding: 26px 34px 27px
+    anim()
+    +media('md')
+      text-align: center;
+      padding 24px 34px 25px
+
+    &.wpcf7-not-valid ~ ^[0]__label
+      top: -24px
+      background: #e33535
+
+  &--full &__label
+    top: -24px
+
+  &__label
+    position: absolute;
+    left: 0
+    top: 0
+    width: auto;
+    padding: 2px 5px 3px 8px
+    font-size: 11px
+    letter-spacing .2em
+    white-space nowrap
+    background: #191919
+    color: #ffffff
+    text-transform: uppercase;
+    anim()
+    +media('md')
+      font-size: 10px
+      left: 50%
+      transform translateX(-50%)
+
+  &--textarea
+    resize: none
+    min-width 100%
+    max-width 100%
+    line-height: 1.2
+

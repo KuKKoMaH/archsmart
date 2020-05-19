@@ -1,0 +1,64 @@
+.contacts
+  .c
+    .contacts__content
+      h1 Контакты
+      p Разнообразный и богатый опыт начало повседневной работы по формированию позиции требуют определения. Таким образом постоянный количественный рост и сфера нашей активности требуют от нас анализа системы обучения кадров.
+      p: b Мы будем очень рады с вами познакомиться лично
+      .contacts__aside
+        .contacts__phones
+          .contacts__label телефоны:
+          .contacts__value
+            | +7 796 547-65-34#[br]
+            | +7 792 354-76-23
+          .contacts__callback
+            a.link.popup__opener(href='#callback')
+              | ПЕРЕЗВОНИТЕ МНЕ
+              +svg('icon-right')
+          .contacts__decor1.texture
+        .contacts__contact
+          .contacts__label email:
+          .contacts__value
+            | hello@proenengineering.ru
+        .contacts__contact
+          .contacts__label факс:
+          .contacts__value
+            | +7 796 547-65-34
+        .contacts__contact
+          .contacts__label адрес:
+          .contacts__value
+            b
+              | 394030, Воронеж, ул. Кольцовская#[br]
+              | д. 35 А, оф. 1403 БЦ "Галерея Чижова"
+      .contacts__img(style='background-image: url(images/04.jpg)')
+
+  .contacts__form
+    .form
+      h2 Свяжитесь с нами
+      //.form__text Идейные соображения высшего порядка, а также укрепление и развитие структуры играет важную рол
+      .form__inputs
+        .form__input
+          label.input
+            input(placeholder='Как к вам обращаться?')
+            .input__label КАК К ВАМ ОБРАЩАТЬСЯ?
+        .form__input
+          label.input
+            input(placeholder='E-mail')
+            .input__label E-MAIL
+        .form__input
+          label.input
+            input(type='tel' placeholder='Ваш телефон')
+            .input__label ВАШ ТЕЛЕФОН
+
+      .form__footer
+        .form__info
+          | Отправляя форму, вы даете#[br]
+          | на согласие на обработку #[a(href='#') персональных данных]#[br]
+          | и согласны с #[a(href='#') политикой конфидициальности]
+        .form__button
+          button.link
+            | ОТПРАВИТЬ
+            +svg('icon-right')
+
+
+  .contacts__decor2.texture
+  .contacts__decor3.texture

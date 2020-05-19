@@ -1,0 +1,315 @@
+html
+  font-family: 'Montserrat', sans-serif;
+  color: #191919
+  font-size: 15px
+  letter-spacing 0.01em
+  font-weight: 300
+  line-height: 1.8
+  background: #fff
+  +media('md')
+    font-size: 12px
+
+@media print {
+  @page {
+    margin: 1cm;
+  }
+}
+
+html, body
+  overflow-x: hidden
+  min-height 100vh
+
+.c
+  margin-left: auto
+  margin-right: auto
+  max-width: $container-lg
+  width: 100%
+  +media('lg')
+    max-width: $container-md
+  +media('md')
+    max-width: 100%
+
+.lazy
+  visibility: hidden
+  opacity: 0
+
+  &.lazy--visible
+    visibility: visible
+    opacity: 1
+
+img[data-src],
+img[data-srcset]
+  //display: block;
+  min-height: 1px;
+
+.hidden
+  display: none
+
+#sprites
+  position: absolute
+  width: 0
+  height: 0
+  top: 0
+  left: 0
+
+.center
+  text-align: center;
+
+.small
+  font-size: .85rem
+  opacity: .5
+
+.texture
+  overflow: hidden;
+  position: relative;
+
+  &:after
+    content: ''
+    position: absolute;
+    width: 1000px
+    height: 1000px
+    top: 50%
+    left: 50%
+    margin-left: -500px
+    margin-top: -500px
+
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAiIGhlaWdodD0iMTAiIHZpZXdCb3g9IjAgMCAxMCAxMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJtMCAwaDV2MTBoLTV6Ii8+PC9zdmc+Cg==")
+    background-repeat: repeat;
+    background-position: center center;
+    opacity: .05
+
+.link
+  color: #191919
+  width: auto;
+  display: inline-block;
+  font-weight: 500
+  letter-spacing .2em
+  border: 0
+  border-left: 2px solid #e33535
+  position: relative;
+  padding: 26px 50px 27px 31px
+  +media('md')
+    font-size: 12px
+    padding: 25px 39px 24px 27px
+
+  &:before, &:after
+    content: ''
+    position: absolute;
+    height: 2px
+    background: #e33535
+    left: 0
+    anim(.25s)
+
+  &:before
+    top: 0
+    width: 116px
+
+  &:after
+    bottom: 0
+    width: 39px
+
+  svg
+    position: absolute;
+    width: 23px
+    height: 20px
+    right: 10px
+    top: 50%
+    transform translateY(-50%)
+    fill #e33535
+    anim()
+
+  &:hover
+    color: #191919
+    border-bottom: 0
+
+    &:before
+      width: 39px
+
+    &:after
+      width: 116px
+
+    svg
+      right: 0
+
+  &--white
+    color: #ffffff
+
+    &:hover
+      color: #ffffff
+
+  &--sm
+    font-size: 11px
+    padding: 8px 12px 9px 12px
+    +media('md')
+      font-size 10px
+
+    svg
+      position: static;
+      vertical-align: middle;
+      width: 7px
+      height: 7px
+      fill: #191919
+      margin-right: 8px
+      margin-top: 5px
+
+
+.tags
+  display: flex;
+  align-self center
+  flex-wrap wrap
+  margin: 0 -6px
+  +media('md')
+    justify-content center
+
+.tag
+  border: 1px solid #e0e0e0
+  letter-spacing .2em
+  margin: 5px 6px
+  font-size: 13px
+  font-weight: normal;
+  padding: 1px 10px
+  color: #191919
+  anim()
+  +media('md')
+    font-size: 10px
+    padding: 6px 15px
+
+  &:hover
+    color: #191919
+    border-color: #e33535
+
+  &--active
+    border-color: #e33535
+    background: #e33535
+    color: #ffffff
+
+.scroll
+  display: block;
+  position: absolute;
+  top: 50%
+  left: 50%
+  margin-left: 590px
+  color: #ffffff
+  font-size: 11px
+  letter-spacing .2em
+  padding: 16px 150px 15px 0
+  transform rotate(90deg)
+  border: 0
+  +media('lg')
+    margin-left: 230px
+
+  &:before, &:after
+    content: ''
+    position: absolute;
+    top: 50%
+    transform translateY(-50%)
+    anim()
+
+  &:before
+    width: 80px
+    height: 1px
+    background: rgba(#ffffff, .1)
+    right: 50px
+
+  &:after
+    width: 50px
+    height: 50px
+    border: 1px solid rgba(#fff, .1)
+    border-radius: 50%
+    right: 0
+
+  svg
+    width: 17px
+    height: 17px
+    position: absolute;
+    fill: #e33535
+    top: 50%
+    right: 16px
+    transform translateY(-50%) rotate(90deg)
+
+  &:hover
+    color: #ffffff
+    &:before
+      background: #e33535
+
+    &:after
+      border-color: #e33535
+
+.nav
+  display: flex;
+
+  &__button
+    position: relative;
+    width: 80px
+    height: 80px
+    background: #191919
+    +media('md')
+      width: 70px
+      height: 70px
+
+    &:last-child
+      border-left: 1px solid #303030
+
+    svg
+      position: absolute;
+      fill: #ffffff
+      top: 50%
+      left: 50%
+      transform translate(-50%, -50%)
+      width: 19px
+      height: 19px
+      anim()
+
+    &--next
+      svg
+        transform translate(-50%, -50%) rotate(180deg)
+
+    &:hover
+      svg
+        fill #e33535
+
+.pagination
+  display: flex;
+  align-items center
+  justify-content center
+  flex-wrap wrap
+
+  .page-numbers
+    position: relative;
+    display: flex;
+    align-items center
+    justify-content center
+    margin: 4px
+    width: 60px
+    height: 60px
+    background: #f7f7f7
+    color: #191919
+    border: 0
+    anim()
+    +media('md')
+      width: 50px
+      height: 50px
+
+    svg
+      width: 14px
+      height: 14px
+      opacity: .2
+      anim()
+
+    &.next
+      svg
+        transform rotate(180deg)
+
+    &.current
+      background: #e33535
+      color: #ffffff
+
+      &:hover
+        color: #ffffff
+
+    &:hover
+      color: #e33535
+
+      svg
+        opacity: 1
+

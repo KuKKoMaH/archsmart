@@ -1,0 +1,27 @@
+mixin header(fixed)
+  header.header(class=fixed && 'header--fixed')
+    .header__search
+      .header__container
+        form
+          input.header__input(placeholder='Что ищем?')
+          button.header__submit
+            +svg('icon-search')
+
+    .header__main
+      .header__container
+        button.header__menu-button
+          +svg('icon-menu', 'header__menu-button-icon-menu')
+          +svg('icon-close', 'header__menu-button-icon-close')
+
+        img.header__logo(src='modules/header/img/logo.png' srcset='modules/header/img/logo@2x.png 2x, modules/header/img/logo@3x.png 3x')
+
+        .header__menu
+          ul
+            li: a(href='#') Компания
+            li: a(href='#') Проекты
+            li: a(href='#') Публикации
+            li: a(href='#') Контакты
+
+        button.header__search-button
+          +svg('icon-search', 'header__search-button-icon-search')
+          +svg('icon-close', 'header__search-button-icon-close')

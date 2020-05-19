@@ -1,0 +1,36 @@
+.articles
+  .c
+    h1 Публикации
+    .articles__tags
+      .tags
+        a.tag(href='#') ТЭГ
+        a.tag(href='#') ДЛИННЫЙ ТЭГ
+        a.tag(href='#') ОЧЕНЬ ДЛИННЫЙ ТЭГ
+
+    .articles__items
+      .articles__item
+        a.card.card--featured(href='#')
+          .card__image(style='background-image: url(images/01.jpeg)')
+            .card__title: span Выделенная новость с длинным заголовком может достигать до трех строк Выделенная новость с длинным заголовком может достигать до трех строк
+          .card__more
+            | ПОДРОБНЕЕ
+            +svg('icon-right')
+      each i in [1,2,3,4,5]
+        .articles__item
+          a.card(href='#')
+            .card__image(style='background-image: url(images/01.jpeg)')
+            .card__title: span Название новости одна или две строки Название новости одна или две строки Название новости одна или две строки
+            .card__body
+              .card__text Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя
+
+    .articles__pagination
+      .pagination
+        a.prev.page-numbers(href="#"): +svg('icon-chevron')
+        span.page-numbers.current 1
+        a.page-numbers(href="#") 2
+        a.page-numbers(href="#") 3
+        a.next.page-numbers(href="#"): +svg('icon-chevron')
+
+  .articles__decor1.texture
+  .articles__decor2.texture
+  .articles__decor3.texture

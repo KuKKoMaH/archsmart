@@ -1,0 +1,154 @@
+.article
+  position: relative;
+  padding: 70px 0 143px
+  +media('md')
+    padding: 50px 0 50px
+
+  &:before
+    content: ''
+    position: absolute;
+    width: 1000px
+    top: 0
+    bottom: 285px
+    left: 50%
+    margin-left: 515px
+    background: #f7f7f7
+    z-index: -1
+    +media('md')
+      display: none;
+
+  &__back
+    margin-bottom: 57px
+    +media('md')
+      margin-left: 20px
+      margin-bottom: 44px
+
+  h1
+    padding: 0 170px 0 200px
+    font-size: 40px
+    line-height: 1.35
+    font-weight: normal;
+    margin-bottom: 58px
+    +media('lg')
+      padding: 0
+    +media('md')
+      font-size: 22px
+      padding: 0 20px
+      margin-bottom: 42px
+
+  &__sub
+    font-size: 18px
+    font-weight: 1.65
+    padding: 0 300px 0 200px
+    margin-bottom: 58px
+    margin-top: -39px
+    +media('lg')
+      padding: 0
+    +media('md')
+      padding: 0 20px
+      font-size: 14px
+      margin-bottom: 42px
+      margin-top: -31px
+
+  &__thumbnail
+    position: relative;
+    margin-bottom: 62px
+    margin-left: 70px
+    max-width 930px
+    +media('lg')
+      margin-left: 0
+    +media('md')
+      margin: 0 20px 44px
+
+  img
+    display: block;
+    max-width 100%
+    height: auto;
+
+  &__content
+    position: relative;
+    +media('lg')
+      display: flex;
+      flex-direction column-reverse
+    +media('md')
+      padding: 0 20px
+
+    &:before
+      content ''
+      position: absolute;
+      width: 175px
+      height: 389px
+      background: #f7f7f7
+      right: 100%
+      margin-right: -70px;
+      top: 251px;
+      z-index: -1
+      +media('lg')
+        margin-right: 20px
+
+  &__text
+    padding: 0 200px
+    letter-spacing 0
+    +media('lg')
+      padding: 0
+
+  &__card
+    float: right
+    width: 370px
+    margin-left: 70px
+    margin-bottom: 70px
+    +media('lg')
+      float: none
+      margin: 41px auto 0
+    +media('md')
+      width: auto;
+
+  &__tags
+    margin-top: 57px
+    +media('md')
+      margin-top: 35px
+      .tags
+        justify-content flex-start
+
+  &__decor1
+    position: absolute;
+    width: 285px
+    height: 130px
+    top: 0
+    left: 50%
+    margin-left: 515px
+
+    &:after
+      transform rotate(30deg)
+
+  &__decor2
+    position: absolute;
+    width: 88px
+    height: 190px
+    right: 50%
+    top: 227px;
+    margin-right: 623px;
+
+    &:after
+      transform rotate(30deg)
+
+  &__decor3
+    position: absolute;
+    width: 72px
+    height: 193px
+    right: 50%
+    bottom: 0
+    margin-right: 728px
+
+    &:after
+      transform rotate(30deg)
+
+  &__decor4
+    position: absolute;
+    width: 72px
+    height: 72px
+    right: 100%
+    top: 100%
+
+    &:after
+      transform rotate(30deg)

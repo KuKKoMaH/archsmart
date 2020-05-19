@@ -1,0 +1,123 @@
+h1, h2, h3, h4, h5, h6
+  font-size: 25px
+  font-weight: 500
+  line-height: 1.52
+  margin-bottom: 1.7em
+  +media('md')
+    font-size: 16px
+    line-height: 1.625;
+
+b, strong
+  font-weight: bold
+
+p
+  margin-bottom: 1em
+
+a
+  //color: $black
+  //color: inherit
+  color: #e33535
+  border-bottom: 1px solid transparent
+  //padding-bottom: 2px
+  anim()
+  &:hover
+    border-color: #e33535
+
+//&:hover
+//  border-color: #e7533b
+
+ul, ol
+  margin-bottom: 1.55em
+
+  li
+    margin-bottom: 1em
+    position relative
+
+ul
+  li
+    padding-left: 0
+
+    &:before
+      content: ''
+      width: 6px
+      height: 6px
+      background: #e87622
+      border-radius: 50%
+      position absolute
+      top: 8px;
+      left: -11px;
+
+ol
+  counter-reset: list;
+
+  li
+    padding-left: 24px
+
+    &:before
+      counter-increment: list;
+      content: counter(list) "."
+      position absolute
+      top: 0;
+      left: 2px;
+      color: $blue
+      font-weight: bold;
+
+del, s
+  text-decoration: line-through
+
+blockquote
+  background: #f5fcfe
+  border-radius: 7px
+  font-style italic
+  font-weight: 300
+  padding: 40px 50px
+  position: relative;
+  margin-bottom: 3rem
+  @media screen and (max-width: $breakpoint-lg - 1)
+    border-radius: 5px
+    padding: 24px 30px
+    margin-bottom: 3.5rem
+    padding-bottom: 8px
+
+  cite
+    position: absolute;
+    font-size: 1rem
+    color: #42bde4
+    text-align: right;
+    right: 52px
+    bottom: 44px
+    @media screen and (max-width: $breakpoint-lg - 1)
+      right: auto;
+      left: 30px
+      bottom: 18px
+
+//position: static;
+
+.wp-block-image
+  margin-bottom: 3rem
+  @media screen and (max-width: $breakpoint-lg - 1)
+    margin-bottom: 3.5rem
+
+  img
+    border-radius: 7px
+    max-width 100%
+    height: auto;
+    display: block;
+    @media screen and (max-width: $breakpoint-lg - 1)
+      border-radius: 5px
+
+  figcaption
+    margin: 10px 0 0
+    font-size: .85rem
+
+.content
+  font-size: 1.25rem
+  @media screen and (max-width: $breakpoint-lg - 1)
+    font-size: 1.2rem
+
+.has-small-font-size
+  font-size: 1rem
+
+table
+  width: 100%
+  border-collapse collapse

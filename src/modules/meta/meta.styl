@@ -1,0 +1,154 @@
+.meta
+  position: relative;
+  margin-bottom: 70px
+  +media('md')
+    margin-bottom: 25px
+
+  .c
+    display: flex;
+    align-items flex-start
+    justify-content center
+    +media('md')
+      flex-wrap wrap
+      padding: 0 20px
+      justify-content flex-start
+
+  //padding: 0 200px
+
+  &__icon
+    height: 30px
+    position: relative
+    margin-bottom: 24px
+    +media('md')
+      margin-bottom: 0px
+
+    svg
+      fill #e33535
+      width: 30px
+      height: 30px
+      position: absolute;
+      left: 0
+      top: 0
+      +media('md')
+        width: 20px
+        height: 20px
+
+  &__label
+    font-size: 13px
+    +media('md')
+      font-size: 10px
+      margin-bottom: 5px
+
+  &__value
+    font-weight: 500
+
+  &__year
+    padding-top: 80px
+    width: 100px
+    padding-right: 30px
+    +media('md')
+      padding-top: 50px
+      width: 75px
+      padding-right: 0
+
+  &__position
+    padding-top: 80px
+    width: 300px
+    padding-right: 30px
+    +media('md')
+      padding-top: 50px
+      width: calc(100% - 75px)
+      padding-right: 0
+
+    svg
+      left: -4px
+      +media('md')
+        left: 0
+
+  &__info
+    background: #f7f7f7
+    padding: 43px 49px 39px
+    width: 370px
+    +media('lg')
+      width: 330px
+      padding: 43px 38px 39px
+    +media('md')
+      margin-top: 44px
+      padding: 24px 40px 19px
+      width: 100%
+
+    & ^[0]__label
+      margin-bottom: 12px
+      +media('md')
+        margin-bottom: 9px
+
+      &:after
+        content: ''
+        display: block;
+        width: 60px
+        height: 1px
+        background: #e33535
+        margin-top: 14px
+        +media('md')
+          margin-top: 11px
+          width: 30px
+
+    ul
+      margin: 0
+
+    li
+      margin-bottom: 4px
+
+      &:before
+        display: none;
+
+  &__link
+    margin-top: 132px
+    text-align: center;
+    +media('md')
+      margin-top: 50px
+
+  &__decor1
+    position: absolute;
+    width: 212px
+    height: 186px
+    left: 50%
+    margin-left: 385px
+    top: 194px
+    +media('md')
+      left: 100%
+      margin-left: -20px
+      top: 0
+      height: 168px
+
+    &:after
+      transform rotate(30deg)
+
+  &__decor2
+    position: absolute;
+    width: 72px
+    height: 194px
+    right: 50%
+    margin-right: 729px
+    top: 0
+    +media('md')
+      right: 100%
+      margin-right: -20px
+      top: 168px
+
+    &:after
+      transform rotate(30deg)
+
+  &__decor3
+    position: absolute;
+    width: 72px
+    height: 72px
+    right: 50%
+    margin-right: 455px;
+    top: 347px
+    +media('md')
+      display: none;
+
+    &:after
+      transform rotate(30deg)
+

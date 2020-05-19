@@ -1,0 +1,85 @@
+.articles
+  position: relative;
+  padding: 135px 0 145px
+  +media('md')
+    padding: 40px 0 46px
+
+  h1
+    font-size: 36px
+    margin-bottom: 1.4em
+    +media('md')
+      text-align: center;
+      font-size: 22px
+      margin-bottom: .4em
+
+  &__tags
+    margin-bottom: 49px
+    +media('md')
+      margin-bottom: 45px
+
+  &__items
+    display: flex;
+    flex-wrap wrap
+    margin: 0 -15px
+    position: relative;
+    z-index: 1
+    +media('md')
+      margin: 0
+
+  &__item
+    width: 33.3333%
+    padding: 15px
+    letter-spacing 0
+    +media('lg')
+      width: 50%
+    +media('md')
+      width: 100%
+      padding: 0 20px 25px
+
+  &__pagination
+    margin-top: 51px
+    +media('md')
+      margin-top: 21px
+
+  &__decor1
+    position: absolute;
+    left: 50%
+    top: 0
+    margin-left: 373px
+    width: 212px
+    height: 186px
+    +media('md')
+      height: 36px
+      margin-left: 122px
+    &:after
+      transform rotate(30deg)
+
+  &__decor2
+    position: absolute;
+    right: 50%
+    top: 444px;
+    margin-right: 728px;
+    width: 72px
+    height: 193px
+    +media('md')
+      right: auto;
+      left: 0
+      margin-right: 0
+      top: auto;
+      bottom: 190px
+
+    &:after
+      transform rotate(30deg)
+
+  &__decor3
+    position: absolute;
+    left: 50%
+    bottom: 0
+    margin-left: 728px;
+    width: 72px
+    height: 72px
+    +media('md')
+      display: none;
+
+    &:after
+      transform rotate(30deg)

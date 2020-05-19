@@ -1,0 +1,246 @@
+.header
+  position: relative;
+  z-index: 10
+  background: #191919 url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYUAAAABCAYAAAAxdbIyAAAAG0lEQVR4AWP4//8/r3uBD8MoHsWjeBSP4lEMACv3i6ZFyGkgAAAAAElFTkSuQmCC') 50% 50%
+  border-bottom: 1px solid #252525
+
+  &--search
+    & ^[0]__search-button
+      &-icon-search
+        opacity: 0
+
+      &-icon-close
+        opacity: 1
+
+    & ^[0]__search
+      opacity: 1
+      pointer-events all
+      transform none
+
+  &--fixed
+    @media screen and (min-width: $breakpoint-md)
+      height: 0
+      background: transparent;
+      border: 0
+      anim()
+      +media('md')
+        height: auto;
+
+      & ^[0]__main
+        position: absolute;
+        top: 100%
+        left: 0
+        width: 100%
+        +media('md')
+          position: relative;
+
+      & ^[0]__search
+        position: absolute;
+        top: auto;
+        bottom: 0
+        transform none
+        opacity: 1
+
+  &--search&--fixed
+    @media screen and (min-width: $breakpoint-md)
+      height: 130px
+
+  &__container
+    position: relative;
+    max-width 1470px
+    padding: 0px 15px
+    margin: 0 auto
+    display: flex;
+    align-items center
+    justify-content space-between
+    height: 130px
+    +media('md')
+      padding: 0px
+      height: 70px
+
+  &__logo
+    +media('md')
+      width: 95px
+
+  &__menu-button
+    position: relative;
+    width: 70px
+    height: 70px
+    background: #e33535
+    display: none;
+    +media('md')
+      display: block;
+
+    svg
+      fill #fff
+      position: absolute;
+      top: 50%
+      left: 50%
+      transform translate(-50%, -50%)
+      anim()
+
+    &-icon-menu
+      width: 24px
+      height: 24px
+
+    &-icon-close
+      width: 22px
+      height: 22px
+      opacity: 0
+
+    &--active
+      & ^[0]__menu-button
+        &-icon-menu
+          opacity: 0
+
+        &-icon-close
+          opacity: 1
+
+  &__menu
+    +media('md')
+      position: fixed;
+      left: 0
+      top: 70px
+      bottom: 0
+      right: 0
+      background: #191919
+      display: flex;
+      justify-content center
+      padding-top: 113px
+      z-index: -1
+      anim()
+
+      pointer-events none;
+      opacity: 0
+      transform translateY(-20px)
+
+      &--active
+        pointer-events all;
+        opacity: 1
+        transform none
+
+    ul
+      display: flex;
+      align-items center
+      margin: 0
+      +media('md')
+        display: block;
+
+    li
+      margin: 0 27px
+      +media('md')
+        margin: 0 0 31px
+
+      &:before
+        display: none;
+
+      &.current-menu-item a, & a:hover
+        &:after
+          width: 39px
+
+    //height: 2px
+
+    a
+      display: block;
+      position: relative;
+      color: #ffffff
+      font-weight: normal;
+      border: 0
+      //letter-spacing 0.16px
+      +media('md')
+        font-size: 18px
+        font-weight: 500
+        text-transform: uppercase
+        letter-spacing 3.6px
+
+      &:after
+        content ''
+        position: absolute;
+        width: 0
+        height: 2px
+        //width: 39px
+        //height: 0
+        background: #e33535
+        anim()
+        top: 100%
+        left: 0
+        margin-top: 8px
+
+  &__search-button
+    position: relative;
+    flex-shrink 0
+    width: 50px
+    height: 50px
+    border: 1px solid rgba(#fff, .1)
+    border-radius: 50px
+    margin-right: 4px
+    //margin-left: 90px
+    anim()
+    +media('md')
+      margin-left: 0
+      margin-right: 20px
+
+    &:hover
+      border-color: #e23535;
+
+    svg
+      position: absolute;
+      left: 50%
+      top: 50%
+      transform translate(-50%, -50%)
+      fill: #ffffff
+      anim()
+
+    &-icon-search
+      width: 16px
+      height: 16px
+
+    &-icon-close
+      width: 17px
+      height: 17px
+      opacity: 0
+
+  &__search
+    position: fixed
+    left: 0
+    width: 100%
+    height: 130px
+    top: 130px
+    background: #191919
+    z-index: -1
+    anim()
+
+    opacity: 0
+    pointer-events none
+    transform translateY(-20px)
+
+    +media('md')
+      height: 70px
+      top: 70px
+
+    form
+      width: 100%
+      height: 100%
+
+  &__input
+    font-size: 18px
+    font-weight: normal;
+    display: block;
+    height: 100%
+    width: 100%
+    color: #ffffff
+    +media('md')
+      padding-left: 20px
+
+  &__submit
+    position: absolute;
+    right: 25px
+    top: 50%
+    transform translateY(-50%)
+    +media('md')
+      right: 20px
+
+    svg
+      width: 28px
+      height: 28px
+      fill: #e33535

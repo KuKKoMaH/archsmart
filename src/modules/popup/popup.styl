@@ -1,0 +1,30 @@
+.popup
+  width: 100vw
+  height: 100vh
+  padding-top: 40px
+  display: flex;
+  align-items center
+  justify-content center
+  flex-direction column
+  margin: 0 auto
+  position: relative
+  background-color: #fff
+  padding-bottom: 40px
+  overflow: auto;
+  +media('lg')
+    padding-top: 90px
+    justify-content flex-start
+
+  &__close
+    position: absolute;
+    right: 50%
+    margin-right: 490px;
+    top: 70px;
+    +media('lg')
+      margin-right: 0
+      right: auto;
+      left: 20px
+      top: 30px
+
+  .mfp-close
+    display: none;

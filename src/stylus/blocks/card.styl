@@ -1,0 +1,150 @@
+.card
+  display: block;
+  box-shadow 0 13px 106px rgba(#191919, .1)
+  background: #ffffff
+  border-top: 2px solid #e23535
+  height: 100%
+  color: #191919
+  border: 0
+
+  &:hover
+    color: #191919
+    & ^[0]__title
+      color: #e23535
+
+  &--featured
+    border-top: 0
+
+    &:hover
+      & ^[0]__title
+        color: #ffffff
+
+      & ^[0]__image
+        &:before
+          opacity: 0
+
+        &:after
+          opacity: .85
+
+    & ^[0]__image
+      position: relative;
+      height: calc(100% - 80px);
+      min-height 269px
+
+      &:before, &:after
+        content: ''
+        position: absolute;
+        left: 0
+        top: 0
+        width: 100%
+        height: 100%
+        anim()
+
+      &:before
+        background: linear-gradient(to top, #191919, rgba(#191919, 0));
+        opacity: .85
+
+      &:after
+        background: linear-gradient(to top, #e23535, rgba(#e23535, 0));
+        opacity: 0
+
+    & ^[0]__title
+      position: absolute;
+      display: block;
+      z-index: 1
+      bottom: 32px
+      left: 0
+      width: 100%
+      background-color: transparent;
+      color: #ffffff
+      max-height: calc(3em * 1.8);
+      height: auto;
+      text-align: left;
+      padding: 0 48px
+      margin: 0
+      +media('md')
+        bottom: 23px
+        padding: 0 30px
+
+      span
+        -webkit-line-clamp: 3
+
+  &__inner
+    position: relative;
+    z-index: 1
+    background: #fff
+
+  &__image
+    height: 218px
+    background-size: cover
+    background-position: 50% 50%
+    +media('md')
+      height: 165px
+
+  &__title
+    background: #ffffff
+    margin: -30px 30px 0
+    text-align: center;
+    font-size: 18px
+    font-weight: normal;
+    padding: 30px 35px 0
+    display: flex;
+    align-items center
+    justify-content center
+    height: calc(2em * 1.8 + 30px);
+    anim()
+    +media('md')
+      font-size: 14px
+      margin: -30px 20px 0
+      padding: 19px 25px 0
+
+    span
+      overflow: hidden;
+      display: block;
+      max-height 100%
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+
+  &__body
+    padding: 8px 50px 34px
+    +media('md')
+      padding: 0 30px 34px
+
+    &:before
+      content: ''
+      display: block;
+      width: 70px
+      height: 1px
+      background: #e23535
+      margin: 0 auto 31px
+      +media('md')
+        width: 60px
+        margin-bottom: 23px
+
+  &__text
+    text-align: center;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    max-height: calc(3em * 1.8);
+
+  &__more
+    text-align: center;
+    background: #e23535
+    color: #ffffff
+    letter-spacing .2em
+    display: flex;
+    align-items center
+    justify-content center
+    height: 80px
+    font-weight: 500
+    +media('md')
+      height: 70px
+
+    svg
+      fill: #ffffff
+      width: 23px
+      height: 23px
+      margin-left: 10px

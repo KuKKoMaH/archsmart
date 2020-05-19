@@ -1,0 +1,161 @@
+.team
+  position: relative;
+  padding: 101px 0 100px
+  +media('md')
+    padding: 25px 0 0
+    margin-bottom: -18px
+
+  &__text
+    max-width 770px
+    margin: 0 auto 148px
+    text-align: center;
+    +media('md')
+      padding: 0 20px
+      margin-bottom: 44px
+
+    &:before
+      content ''
+      display: block;
+      width: 150px
+      height: 1px
+      background: #e33535
+      margin: 0 auto 17px
+      +media('md')
+        margin-bottom: 13px
+
+  &__items
+    display: flex;
+    flex-wrap wrap
+    align-self flex-start
+
+  &__item
+    position: relative;
+    width: 50%
+    margin-bottom: 44px
+    +media('md')
+      width: 100%
+
+    &:before
+      content ''
+      position: absolute;
+      width: 370px
+      height: 310px
+      background: #f7f7f7
+      z-index: -1
+
+    @media screen and (min-width: $breakpoint-md)
+      padding-right: 15px
+      &:nth-child(6n + 1)
+        //&:nth-child(6n)
+
+        &:before
+          left: 50px
+          top: -50px
+
+      &:nth-child(6n + 2):before
+        right: 50px
+        top: 190px
+
+      &:nth-child(6n + 3):before
+        right: 65px
+        top: 0px
+
+      &:nth-child(6n + 4):before
+        right: 50px
+        top: 50px
+
+      &:nth-child(6n + 5):before
+        right: 65px
+        top: 0px
+
+      &:nth-child(6n + 6):before
+        right: 50px
+        top: 50px
+
+      &:nth-child(2n)
+        padding-right: 0
+        padding-left: 15px
+        padding-top: 100px
+
+    +media('md')
+      margin-bottom: 65px
+      &:before
+        width: 170px
+        height: 170px
+        top: -20px
+
+      &:nth-child(2n + 1):before
+        right: 50%
+        margin-right: -50px
+      &:nth-child(2n):before
+        left: 50%
+        margin-left: -50px
+
+  &__image
+    width: 370px
+    height: 493px
+    margin: 0 auto 41px
+    background-size: cover
+    background-position: 50% 50%
+    +media('lg')
+      width: 350px
+      height: 470px
+    +media('md')
+      width: 200px
+      height: 270px
+      margin-bottom: 15px
+
+  &__name
+    width: 290px
+    margin: 0 auto 2px
+    font-weight: 500
+    +media('md')
+      width: 160px
+      margin-bottom: 0
+
+  &__position
+    width: 290px
+    margin: 0 auto
+    font-size: 13px
+    +media('md')
+      width: 160px
+      font-size: 10px
+
+  &__decor1
+    position: absolute;
+    width: 80px
+    height: 240px
+    left: 50%
+    margin-left: 600px;
+    top: 110px;
+    +media('lg')
+      margin-left: 450px
+    +media('md')
+      margin-left: 0
+      left: auto;
+      right: 50%
+      margin-right: 119px;
+      top: 384px;
+
+    &:after
+      transform rotate(60deg)
+
+  &__decor2
+    position: absolute;
+    width: 220px
+    height: 240px
+    right: 50%
+    margin-right: 580px;
+    bottom: 647px;
+    +media('lg')
+      margin-right: 450px
+
+    +media('md')
+      margin-right: 0
+      right: auto;
+      left: 50%
+      margin-left: 100px;
+      bottom: 720px;
+
+    &:after
+      transform rotate(60deg)

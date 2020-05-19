@@ -1,0 +1,171 @@
+.contacts
+  position: relative;
+  padding: 0 0 160px
+  +media('md')
+    padding-bottom: 60px
+    text-align: center;
+
+  &:before
+    content ''
+    position: absolute;
+    width: 312px;
+    height: 629px;
+    right: 50%;
+    margin-right: 485px;
+    top: 556px;
+    background: #f7f7f7
+
+  .c
+    position: relative;
+    padding-top: 135px
+    +media('md')
+      padding-top: 40px
+
+  h1
+    font-size: 36px
+    margin-bottom: 42px
+    +media('md')
+      font-size: 22px
+      margin-bottom: 23px
+
+    &:after
+      content: ''
+      display: block;
+      width: 100px
+      height: 2px
+      background: #e33535
+      margin-top: 11px
+      +media('md')
+        width: 60px
+        height: 1px
+        margin: 6px auto 0
+
+  b, string
+    font-size: 18px
+    color: #e33535
+    font-weight: normal;
+    +media('md')
+      font-size: 12px
+
+  p
+    margin-bottom: 2em
+
+  &__content
+    width: 570px
+    +media('lg')
+      width: auto;
+      padding: 0 20px
+
+  &__aside
+    position: absolute;
+    right: 0
+    top: 0
+    width: 470px
+    +media('lg')
+      position: relative;
+      width: auto;
+
+    &:before, &:after
+      content ''
+      position: absolute;
+      background: #f7f7f7
+      +media('lg')
+        display: none;
+
+    &:before
+      width: 100px
+      height: 429px;
+      right: 100%;
+      margin-right: 130px;
+      bottom: -238px;
+
+    &:after
+      width: 914px
+      height: 180px;
+      top: 100%;
+      margin-top: 58px;
+      left: 0;
+      margin-left: -230px;
+
+  &__phones
+    position: relative;
+    background: #f7f7f7
+    padding: 69px 80px 81px
+    margin-bottom: 10px
+    +media('md')
+      padding: 23px 20px 30px
+      margin: 43px 0 5px
+
+
+    & ^[0]__value
+      font-weight: 500
+
+  &__img
+    margin-top: 63px
+    width: 470px
+    height: 608px
+    background-size: cover
+    background-position: 50% 50%
+    +media('md')
+      margin: 21px 0 0
+      height: 180px
+      width: auto;
+
+  &__label
+    opacity: .5
+    margin-bottom: 4px
+    +media('md')
+      font-size: 10px
+      margin-bottom: 3px
+
+  &__value
+    font-size: 18px
+    +media('md')
+      font-size: 14px
+
+  &__callback
+    margin-top: 19px
+
+  &__contact
+    padding-top: 49px
+    +media('md')
+      padding-top: 37px
+
+  &__form
+    margin-top: 70px
+
+  &__decor1
+    position: absolute;
+    left: 100%
+    top: 100%
+    width: 110px
+    height: 100px
+    +media('md')
+      width: 72px
+      height: 193px
+
+    &:after
+      transform rotate(30deg)
+
+  +media('md')
+    &__decor2
+      position: absolute;
+      width: 50px
+      height: 50px
+      top: 0
+      left: 50%
+      margin-left: 110px
+
+      &:after
+        transform rotate(30deg)
+
+    &__decor3
+      position: absolute;
+      width: 50px
+      height: 50px
+      bottom 10px
+      left: 50%
+      margin-left: 110px
+
+      &:after
+        transform rotate(30deg)

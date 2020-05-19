@@ -1,0 +1,71 @@
+.search
+  padding: 94px 20px 110px
+  max-width: 810px
+  margin: 0 auto
+  +media('md')
+    padding: 40px 20px 50px
+
+  h1
+    font-size: 36px
+    margin-bottom: 80px
+    +media('md')
+      font-size: 22px
+      text-align: center;
+      margin-bottom: 41px
+
+  &__form
+    margin-bottom: 70px
+    +media('md')
+      margin-bottom: 30px
+
+    .input
+      margin-bottom: 0
+
+  &__button
+    right: 0
+    top: 0
+    width: 80px
+    height: 80px
+    position: absolute;
+    z-index: 1
+    +media('md')
+      width: 70px
+      height: 70px
+
+    svg
+      position: absolute;
+      left: 50%
+      top: 50%
+      margin-top: -11px
+      margin-left: -11px
+      width: 22px
+      height: 22px
+      fill: #e33535
+
+  &__items
+    mark
+      background-color: transparent
+      color: #e33535
+
+  &__item
+    color: #191919
+    cursor: pointer;
+    display: block;
+    border: 1px solid #e8e8e8
+    margin-top: 10px
+    padding: 30px 38px
+    +media('md')
+      padding: 21px 27px
+    &:hover
+      & ^[0]__title
+        color: #e33535
+
+  &__title
+    font-size: 17px
+    font-weight: 500
+    margin-bottom: 5px
+    anim()
+    +media('md')
+      font-size: 14px
+
+

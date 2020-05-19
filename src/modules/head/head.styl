@@ -1,0 +1,63 @@
+.head
+  position: relative;
+  background-size: cover
+  background-position: 50% 50%
+  height: 750px
+  padding-bottom: 85px
+  +media('lg')
+    height: 600px
+  +media('md')
+    height: auto;
+    padding-bottom: 44px
+    padding-top: 124px
+
+  &:before
+    content: ''
+    position: absolute;
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYUAAAABCAYAAAAxdbIyAAAAG0lEQVR4AWP4//8/r3uBD8MoHsWjeBSP4lEMACv3i6ZFyGkgAAAAAElFTkSuQmCC') 50% 50%, linear-gradient(49deg, #191919, rgba(#191919, 0.85), #191919)
+
+  .c
+    position: relative;
+    z-index: 1
+    height: 100%
+    display: flex;
+    flex-direction column
+    align-items flex-start
+    justify-content flex-end
+    +media('md')
+      padding: 0 20px
+
+  &__label
+    font-size: 11px
+    background: #ffffff
+    letter-spacing .2em
+    padding: 2px 7px 3px
+    margin-bottom: 20px
+    margin-left: 70px
+    +media('md')
+      font-size: 8px
+      padding: 0px 4px
+      margin-bottom: 18px
+      margin-left: 0
+
+  h1
+    color: #ffffff
+    font-weight: 800
+    font-size: 66px
+    line-height: 1.2
+    letter-spacing .01em
+    margin: 0
+    border-left: 1px solid #e33535
+    padding-left: 65px
+    padding-right: 200px
+    +media('lg')
+      font-size: 40px
+      padding-right: 100px
+    +media('md')
+      font-size: 28px
+      padding-left: 40px
+      padding-right: 0

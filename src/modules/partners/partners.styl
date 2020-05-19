@@ -1,0 +1,136 @@
+.partners
+  position: relative;
+  padding: 132px 0 0
+  margin-bottom: -30px
+  +media('md')
+    padding: 56px 0 0
+
+  &__items
+    display: flex;
+    flex-wrap wrap
+    align-items flex-start
+    +media('md')
+      padding: 0 20px
+
+  &__item
+    position: relative;
+
+    @media screen and (min-width: $breakpoint-lg)
+      width: 470px
+      margin-bottom: 172px
+
+      &:nth-child(2n + 1)
+        margin-right: 130px
+
+      &:nth-child(2n)
+        margin-right: 93px
+
+      &:nth-child(4n + 2)
+        align-self flex-end
+        padding-right: 120px
+        padding-top: 93px
+
+        & ^[0]__image
+          top: 0px
+
+      &:nth-child(4n + 3)
+        padding-left: 100px
+        padding-top: 71px
+        padding-right: 20px
+
+        & ^[0]__image
+          top: -21px
+
+      &:nth-child(4n + 1),
+      &:nth-child(4n)
+        background: #f7f7f7
+        border-right: 2px solid #e33535
+        padding: 62px 60px 53px 60px
+        //padding: 62px 60px 53px 60px
+
+        & ^[0]__image
+          left: 60px
+          top: -29px
+
+    @media screen and (min-width: $breakpoint-md) and (max-width: $breakpoint-lg - 1)
+      width: 50%
+      padding: 38px
+      margin-bottom: 80px
+
+      &:nth-child(4n + 1),
+      &:nth-child(4n)
+        background: #f7f7f7
+        border-right: 2px solid #e33535
+
+      & ^[0]__image
+        top: -30px
+        left: 40px
+
+    +media('md')
+      padding: 43px 38px 35px
+      margin-bottom: 40px
+
+      &:nth-child(2n + 1)
+        background: #f7f7f7
+        border-right: 2px solid #e33535
+        margin-bottom: 80px
+
+      & ^[0]__image
+        top: -30px
+        left: 40px
+
+  &__image
+    position: absolute;
+    border-radius 50%
+    width: 60px
+    height: 60px
+    overflow: hidden;
+
+  &__text
+    font-style: italic;
+    margin-bottom: 25px
+    +media('md')
+      margin-bottom: 19px
+
+  &__name
+    font-weight: 500
+
+  &__position
+    margin-top: 3px
+    font-size: 13px
+    +media('md')
+      margin-top: 0
+      font-size: 10px
+
+  &__decor1
+    position: absolute;
+    left: 50%
+    margin-left: 580px;
+    top: 162px;
+    width: 220px
+    height: 240px
+    +media('md')
+      left: auto;
+      margin-left: 0
+      right: 100%
+      margin-right: -20px
+      top: 366px
+
+    &:after
+      transform rotate(60deg)
+
+  &__decor2
+    position: absolute;
+    left: 50%
+    margin-left: 416px;
+    bottom: 30px
+    width: 310px
+    height: 61px
+    +media('md')
+      left: auto;
+      margin-left: 0
+      right: 50%
+      margin-right: -140px
+
+    &:after
+      transform rotate(-60deg)

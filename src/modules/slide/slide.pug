@@ -1,0 +1,33 @@
+.slide.scroll__parent
+  .slide__slider
+    .slide__items
+      .slide__item
+        .slide__background.swiper-lazy(data-background='modules/slide/img/slide-img.jpg')
+        .slide__content: .c
+          .slide__label РАЗДЕЛ / ТИП ПРОЕКТА
+          .slide__title Название проекта который отображается
+          .slide__text Задача организации, в особенности же сложившаяся структура организации позволяет оценить значение форм развития.
+          a.slide__link.link.link--white(href='#')
+            | ПОДРОБНЕЕ
+            +svg('icon-right')
+      .slide__item
+        .slide__background.swiper-lazy(data-background='modules/slide/img/slide-img.jpg')
+        .slide__content: .c
+          .slide__label РАЗДЕЛ / ТИП ПРОЕКТА
+          .slide__title Название проекта который отображается
+          .slide__text Задача организации, в особенности же сложившаяся структура организации позволяет оценить значение форм развития.
+          a.slide__link.link.link--white(href='#')
+            | ПОДРОБНЕЕ
+            +svg('icon-right')
+
+  .slide__nav.nav
+    button.nav__button.nav__button--prev: +svg('icon-chevron')
+    button.nav__button.nav__button--next: +svg('icon-chevron')
+
+  a.scroll(href='#')
+    | SCROLL
+    +svg('icon-scroll')
+
+  a.slide__video(href='https://www.youtube.com/watch?v=dQw4w9WgXcQ')
+    span.slide__video-icon: +svg('icon-play')
+    | Видео о нас
