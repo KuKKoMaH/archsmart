@@ -59,8 +59,10 @@
       height: 70px
 
   &__logo
-    +media('md')
-      width: 95px
+    border: 0
+    img
+      +media('md')
+        width: 95px
 
   &__menu-button
     position: relative;
@@ -123,6 +125,7 @@
       display: flex;
       align-items center
       margin: 0
+      list-style: none;
       +media('md')
         display: block;
 

@@ -20,11 +20,14 @@ a
   border-bottom: 1px solid transparent
   //padding-bottom: 2px
   anim()
+
   &:hover
     border-color: #e33535
 
-//&:hover
-//  border-color: #e7533b
+hr
+  margin: 2em auto;
+  max-width: 300px;
+  border-top: 2px solid #191919;
 
 ul, ol
   margin-bottom: 1.55em
@@ -34,33 +37,12 @@ ul, ol
     position relative
 
 ul
-  li
-    padding-left: 0
-
-    &:before
-      content: ''
-      width: 6px
-      height: 6px
-      background: #e87622
-      border-radius: 50%
-      position absolute
-      top: 8px;
-      left: -11px;
+  padding-left: 1.5em
+  list-style disc
 
 ol
   counter-reset: list;
-
-  li
-    padding-left: 24px
-
-    &:before
-      counter-increment: list;
-      content: counter(list) "."
-      position absolute
-      top: 0;
-      left: 2px;
-      color: $blue
-      font-weight: bold;
+  list-style: decimal
 
 del, s
   text-decoration: line-through
@@ -99,16 +81,18 @@ blockquote
     margin-bottom: 3.5rem
 
   img
-    border-radius: 7px
     max-width 100%
     height: auto;
     display: block;
-    @media screen and (max-width: $breakpoint-lg - 1)
-      border-radius: 5px
 
   figcaption
     margin: 10px 0 0
     font-size: .85rem
+
+.wp-block-gallery
+  & li
+    &:before
+      display: none;
 
 .content
   font-size: 1.25rem
@@ -121,3 +105,11 @@ blockquote
 table
   width: 100%
   border-collapse collapse
+
+@media (max-width: 600px)
+  .wp-block-media-text.has-media-on-the-right.is-stacked-on-mobile
+    .wp-block-media-text__media
+      grid-row: 1
+
+    .wp-block-media-text__content
+      grid-row: 2

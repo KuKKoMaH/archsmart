@@ -13,7 +13,7 @@ mixin header(fixed)
           +svg('icon-menu', 'header__menu-button-icon-menu')
           +svg('icon-close', 'header__menu-button-icon-close')
 
-        img.header__logo(src='modules/header/img/logo.png' srcset='modules/header/img/logo@2x.png 2x, modules/header/img/logo@3x.png 3x')
+        a.header__logo: img(src='modules/header/img/logo.png' srcset='modules/header/img/logo@2x.png 2x, modules/header/img/logo@3x.png 3x')
 
         .header__menu
           ul

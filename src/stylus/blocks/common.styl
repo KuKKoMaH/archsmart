@@ -1,5 +1,5 @@
 html
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   color: #191919
   font-size: 15px
   letter-spacing 0.01em
@@ -28,6 +28,16 @@ html, body
     max-width: $container-md
   +media('md')
     max-width: 100%
+
+
+  &--content
+    margin-bottom: 80px
+    +media('md')
+      padding-left: 20px
+      padding-right: 20px
+
+.cf
+  cf()
 
 .lazy
   visibility: hidden
@@ -162,6 +172,7 @@ img[data-srcset]
     justify-content center
 
 .tag
+  //font-family: 'Ubuntu', sans-serif
   border: 1px solid #e0e0e0
   letter-spacing .2em
   margin: 5px 6px
@@ -229,6 +240,7 @@ img[data-srcset]
 
   &:hover
     color: #ffffff
+
     &:before
       background: #e33535
 
